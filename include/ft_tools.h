@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_tools.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olivier <olivier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/10/27 02:24:49 by olivier           #+#    #+#             */
-/*   Updated: 2014/10/27 03:05:48 by olivier          ###   ########.fr       */
+/*   Created: 2014/10/27 02:38:10 by olivier           #+#    #+#             */
+/*   Updated: 2014/10/27 02:39:00 by olivier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_stdin.h>
+#ifndef FT_TOOLS_H
+#define FT_TOOLS_H
+# include <libft.h>
 
-int main(int argc, char const **argv)
-{
-	(void)argc;
-	(void)argv;
-	ft_read_stdin();
-	return 0;
-}
+char	*ft_strjoin_free(char **s1, char *s2);
+#endif

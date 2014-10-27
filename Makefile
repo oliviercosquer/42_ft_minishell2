@@ -7,11 +7,15 @@ LIB = -L$(LIBFT_DIR) -lft
 FLAGS = -Wall -Werror -Wextra
 SRC_PATH = ./src
 
-SRC_FILES =	main.c
+SRC_FILES =	main.c \
+			ft_stdin.c \
+			ft_tools.c \
+			ft_path.c \
+			get_next_line.c
 
-FILES = $(addprefix $(SRC_PATH),$(SRC_FILES))
+FILES = $(addprefix $(SRC_PATH)/,$(SRC_FILES))
 
-all: libft_all 
+all: libft_all ${NAME}
 
 libft_all:
 	@make -C $(LIBFT_DIR) all
@@ -31,7 +35,7 @@ clean: libft_clean
 	@rm -f $(FILES:.c=.o)
 
 fclean: libft_fclean clean
-	@echo Delete server $(SERVER_NAME)
-	@rm -f $(SERVER_NAME)
+	@echo Delete $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all

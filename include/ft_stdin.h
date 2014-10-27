@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_stdin.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olivier <olivier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/10/27 02:24:49 by olivier           #+#    #+#             */
-/*   Updated: 2014/10/27 03:05:48 by olivier          ###   ########.fr       */
+/*   Created: 2014/10/27 02:36:53 by olivier           #+#    #+#             */
+/*   Updated: 2014/10/27 03:12:00 by olivier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_stdin.h>
+#ifndef FT_STDIN_H
+# define FT_STDIN_H
+# define PROMPT "$$>"
+# include <unistd.h>
+# include <libft.h>
+# include <ft_tools.h>
 
-int main(int argc, char const **argv)
-{
-	(void)argc;
-	(void)argv;
-	ft_read_stdin();
-	return 0;
-}
+void	ft_put_prompt(void);
+void	ft_read_stdin(void);
+int		ft_treat_stdin(char *str);
+#endif
